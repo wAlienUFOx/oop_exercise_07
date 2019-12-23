@@ -1,0 +1,13 @@
+c doc
+a rectangle 0 0 0 1 4 1 4 0
+a trapeze 0 0 1 1 2 1 3 0
+p
+r 0
+p
+u
+p
+a rhombus 0 0 -1 1 0 2 1 1
+p
+u
+p
+q

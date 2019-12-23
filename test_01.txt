@@ -1,0 +1,11 @@
+c doc
+a rectangle 0 0 0 2 2 2 2 0
+a rectangle 0 0 0 3 5 3 5 0
+a rhombus -2 0 0 4 2 0 0 -4
+p
+s doc.txt
+r 0 r 0 r 0
+p
+l doc.txt
+p
+q
