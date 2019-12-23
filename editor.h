@@ -14,6 +14,8 @@ public:
 
     void CreateDocument(const std::string& name) {
         Doc = std::make_shared<Document>(name);
+	while(!History.empty())
+            History.pop();
     }
 
     void InsertPrimitive(std::istream& is){
@@ -37,6 +39,8 @@ public:
     void LoadDocument(const std::string& filename) {
         Doc = std::make_shared<Document>("NewDoc");
         Doc->Load(filename);
+	while(!History.empty())
+            History.pop();
     }
 
     void Undo() {

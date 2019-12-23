@@ -12,11 +12,10 @@
 
 class Document {
 public:
-    Document(): Id(1), Name(""), Vec(0), Factory()
+    Document(): Name(""), Vec(0), Factory()
     {}
 
     explicit Document(std::string name):
-            Id(1),
             Name(std::move(name)),
             Vec(0),
             Factory()
@@ -56,7 +55,6 @@ public:
             Vec.push_back(Factory.FigureCreate(type));
             Vec.back()->Deserialize(is);
         }
-        Id = Vec.size();
     }
 
     void Print() {
@@ -83,7 +81,6 @@ public:
     }
 
 private:
-    uint32_t Id;
     std::string Name;
     std::vector<std::shared_ptr<figures::Figure>> Vec;
     factory::Factory Factory;
